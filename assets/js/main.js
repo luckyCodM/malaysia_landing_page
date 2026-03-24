@@ -207,3 +207,47 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+//  <!-- JAVASCRIPT FOR TAB NAVIGATION -->
+
+      const tabs = document.querySelectorAll("#badgeTabs .list-group-item");
+      const categories = document.querySelectorAll(".badge-category");
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+
+          // Remove active
+          tabs.forEach(t => t.classList.remove("active-badge"));
+
+          // Add active to clicked tab
+          this.classList.add("active-badge");
+
+          // Hide all categories
+          categories.forEach(cat => cat.classList.remove("active"));
+
+          // Show target category
+          const target = this.getAttribute("data-target");
+          document.getElementById(target).classList.add("active");
+        });
+      });
+
+//  <!-- END OF JAVASCRIPT FOR TAB NAVIGATION -->
+
+    const scrollTopBtn = document.getElementById('scroll-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('show');
+      } else {
+        scrollTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+//  <!-- END OF SCROLL TO TOP BUTTON JAVASCRIPT -->

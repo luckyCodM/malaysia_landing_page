@@ -230,12 +230,12 @@ h6 {
   margin-right: 8px;
 }
 
-.header .logo h1 {
+/* .header .logo h1 {
   font-size: 30px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
-}
+} */
 
 .header .cta-btn,
 .header .cta-btn:focus {
@@ -2035,6 +2035,33 @@ section,
 /*--------------------------------------------------------------
 # Terms of Use Page Section
 --------------------------------------------------------------*/
+
+/* section {
+    background: #ffffff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+section strong {
+    font-weight: 600;
+} */
+
 
 /* Circle container */
 .icon-circle {
