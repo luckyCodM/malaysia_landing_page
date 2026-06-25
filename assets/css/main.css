@@ -55,6 +55,11 @@ body {
   font-family: var(--default-font);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -226,8 +231,11 @@ h6 {
 }
 
 .header .logo img {
+  width: auto;
+  height: auto;
   max-height: 55px;
   margin-right: 8px;
+  object-fit: contain;
 }
 
 /* .header .logo h1 {
@@ -565,8 +573,11 @@ h6 {
 }
 
 .footer .footer-about .logo img {
+  width: auto;
+  height: auto;
   max-height: 55px;
   margin-right: 8px;
+  object-fit: contain;
 }
 
 .footer .footer-about .logo span {
@@ -1025,6 +1036,11 @@ section,
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 110px 0 55px;
+  }
+
   .hero h1 {
     font-size: 30px;
     text-align: center;
@@ -1032,6 +1048,21 @@ section,
 
   .hero p {
     font-size: 18px;
+    text-align: center;
+  }
+
+  .hero .d-flex {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .hero .btn-watch-video {
+    margin-left: 0;
+  }
+
+  .hero button[type=submit] {
+    width: 100%;
+    min-height: 48px;
   }
 }
  .hero-form-box {
@@ -1219,6 +1250,9 @@ section,
 
 .services .img img {
   transition: 0.6s;
+  width: 100%;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
 }
 
 .services .details {
@@ -1280,6 +1314,13 @@ section,
 
 .services .service-item:hover .img img {
   transform: scale(1.2);
+}
+
+@media (max-width: 575px) {
+  .services .details {
+    margin: -72px 16px 0;
+    padding: 42px 20px 28px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1885,6 +1926,7 @@ section,
 }
 
 .contact .php-email-form input[type=text],
+.contact .php-email-form input[type=tel],
 .contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
   font-size: 14px;
@@ -1897,12 +1939,14 @@ section,
 }
 
 .contact .php-email-form input[type=text]:focus,
+.contact .php-email-form input[type=tel]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
 .contact .php-email-form input[type=text]::placeholder,
+.contact .php-email-form input[type=tel]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
@@ -1915,6 +1959,7 @@ section,
   padding: 10px 30px;
   transition: 0.4s;
   border-radius: 50px;
+  min-height: 44px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
@@ -2074,4 +2119,3 @@ section,
     width: 80%;
   }
 }
-
